@@ -9,6 +9,7 @@ function PricingCard({
     data: PriceDataType;
     interval: IntervalType;
 }) {
+
     return (
         <div className="">
             <p className="xs:mb-[14px] xs:leading-[24px] lg:leading-8 2xl:leading-10 group-hover:text-white lg:text-[28px] xs:text-[18px] 2xl:text-[28px] font-[600] text-text-primary pa">
@@ -20,7 +21,7 @@ function PricingCard({
             >
                 ${data.price[interval]}{" "}
                 <span className=" text-[#9AA0A6] first-letter:uppercase group-hover:text-white lg:text-[12px] 2xl:text-[18px]">
-                    / {(data.isTrial && "For Week") || interval}
+                    / {(data.isTrial && "only 3 days") || interval}
                 </span>
             </p>
             <Link href={`/pricing/edit/${data._id}?interval=${interval}`}>
