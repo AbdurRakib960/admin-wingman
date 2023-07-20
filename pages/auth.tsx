@@ -25,8 +25,9 @@ function Auth() {
     const [buttonLoading, setButtonLoading] = useState(false);
     const [error, setError] = useState("");
     const [remember, setRemember] = useState(true);
-    const adminUser = "admin.wingman-AI@gmail.com";
-    const adminPassword = "wingmanAI12345";
+    const adminUser = process.env.NEXT_PUBLIC_ADMIN_EMAIL
+    const adminPassword = process.env.NEXT_PUBLIC_PASSWORD;
+
 
     const {
         register,
