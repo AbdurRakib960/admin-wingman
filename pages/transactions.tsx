@@ -17,6 +17,7 @@ export const BILLING_KEY = "BillingHistory";
 const Transactions = () => {
 
     const { data, isLoading } = useTransactionsQuery();
+    console.log(data, "data__(()))")
 
     return (
         <DefaultLayout>
@@ -27,7 +28,7 @@ const Transactions = () => {
                             <p className="text-text-primary lg:pt-[10px] text-[22px] leading-[30px] font-medium lg:text-[28px] lg:font-semibold capitalize 3xl:text-[32px] mb-[16px] lg:mb-0 mt-[16px]  lg:mt-0">
                                 Transactions
                             </p>
-                            <div className="text-text-primary lg:pt-[10px] text-[18px] leading-[22px] font-medium lg:text-[20px] lg:font-semibold capitalize 3xl:text-[28px] mb-[16px] lg:mb-0 mt-[16px]  lg:mt-0">Sold plan : <span className="text-[16px] text-text-primary bg-primary p-[4px] rounded-full">10</span> </div>
+                            <div className="text-text-primary lg:pt-[10px] text-[18px] leading-[22px] font-medium lg:text-[20px] lg:font-semibold capitalize 3xl:text-[28px] mb-[16px] lg:mb-0 mt-[16px]  lg:mt-0">Sold plan : <span className="text-[16px] text-text-primary bg-primary p-[4px] rounded-full">{data?.length}</span> </div>
                         </div>
 
                     </div>
