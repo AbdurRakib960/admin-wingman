@@ -11,7 +11,7 @@ function CustomerTopSection() {
             <div className="flex flex-col lg:flex-row flex-wrap gap-[16px] justify-between mb-[16px] 3xl:mb-[27px]">
                 <div className="">
                     <h2 className="text-[22px] leading-[30px] font-medium lg:text-[28px] lg:leading-[40px] 3xl:text-[32px] 3xl:leading-[42px] lg:font-semibold text-text-primary">
-                        Customers
+                        Users
                     </h2>
                 </div>
             </div>
