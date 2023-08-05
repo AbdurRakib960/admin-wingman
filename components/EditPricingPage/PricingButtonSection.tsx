@@ -17,10 +17,15 @@ function PricingButtonSection() {
         if (loading) return;
         setLoading(true);
         try {
-            await api.put(`/pricings/${id}`, state);
-            refetch();
-            setLoading(false);
-            toast.success("Pricing updated successfully");
+            if (state?.title !== "Trial" && state?.title !== "Premium") {
+                toast.error("Set the Subscription name either Trial or premium")
+                setLoading(false);
+            } else {
+                await api.put(`/pricings/${id}`, state);
+                refetch();
+                setLoading(false);
+                toast.success("Pricing updated successfully");
+            }
         } catch (err: any) {
             const errMessage = err.response
                 ? err.response.data.message
