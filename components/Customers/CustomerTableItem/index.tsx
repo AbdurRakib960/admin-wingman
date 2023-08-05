@@ -60,6 +60,7 @@ const TableItem = ({ item, index }: TableItemType) => {
         }
     };
 
+
     return (
         <>
             <tr
@@ -86,7 +87,7 @@ const TableItem = ({ item, index }: TableItemType) => {
                 <td className="relative px-6 py-4 text-primary text-[14px] font-normal">
                     <div className="flex items-center justify-between ">
                         <h1>
-                            {item?.trial === false ? "Premium user" : "Trail user"}
+                            {item?.customer ? item?.customer : "Unverified user"}
                         </h1>
                         <img
                             src="/images/three-dot.svg"

@@ -213,7 +213,7 @@ export const customerTableHead = [
     "Name",
     "Email",
     "Join Date",
-    "User Type",
+    "Customer Id",
 ];
 export const productDetails = [
     {
