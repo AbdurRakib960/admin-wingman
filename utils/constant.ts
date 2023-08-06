@@ -43,6 +43,12 @@ export const SideNav = [
         url: "/footer",
         title: "footer",
     },
+    {
+        id: 5,
+        Icon: FooterIcon,
+        url: "/card-action",
+        title: "Card Action",
+    },
 ];
 
 
